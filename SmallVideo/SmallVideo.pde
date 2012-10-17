@@ -1,11 +1,11 @@
 /**
-Trick to go around averaging colors.
-Will take camera input, copy all info to a smaller version, so we can then
-take color information from the smaller version.
-
-Thanks Dan!
+ Trick to go around averaging colors.
+ Will take camera input, copy all info to a smaller version, so we can then
+ take color information from the smaller version.
  
-*/
+ Thanks Dan!
+ 
+ */
 
 import processing.video.*;
 
