@@ -40,7 +40,7 @@ Capture video;
 
 void setup() {
   size(640, 480);
-
+  colorMode(HSB);
   grid = new Cell[cols][rows];
 
   // Happy birthday objects!
@@ -86,10 +86,10 @@ void draw() {
 
             fill(video.pixels[loc]);
             rect (x, y, cellWidth, cellHeight);
+            //grid[i][j].updateColor(tempColor);
+            //grid[i][j].display();
           }
         }
-        grid[i][j].updateColor(tempColor);
-        grid[i][j].display();
       }
     }
   }

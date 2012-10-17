@@ -19,10 +19,13 @@ class Cell {
   void updateColor (color tempColor) {
     myColor = tempColor;
   }
-  
+
   void display() {
     //noStroke();
     stroke(255);
+    myColor = int (brightness(myColor));
+    if (myColor > threshold) myColor = 255;
+    if (myColor <= threshold) myColor = 0;
     fill(myColor);
     rect(x, y, w, h);
   }

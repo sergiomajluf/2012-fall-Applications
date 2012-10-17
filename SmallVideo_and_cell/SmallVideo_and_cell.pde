@@ -19,7 +19,7 @@ int rows = 8;
 
 color tempColor = 190; // initial cell color, not White nor Black
 
-int threshold = 200; // rise to make more sensitive 
+int threshold = 100; // rise to make more sensitive 
 // 2D Array of objects
 Cell[][] grid; 
 
@@ -53,19 +53,21 @@ void draw() {
     small.loadPixels();
   }
 
-  //image(webcamVideo, 0, 0);
+  /* for debuggin only, we don't need to display the live feed on screen
+  image(webcamVideo, 0, 0);
+  image(small, 0, 0);  
+  */
 
-  //image(small, 0, 0);
-
+  
   // go through the array and fill each cell
   for (int i = 0; i < cols; i ++ ) {
     for (int j = 0; j < rows; j ++ ) {
 
       // this is from Mirror2 Example
       int loc = (small.width - i - 1) + j*small.width; // Reversing x to mirror the image
-
+      
       tempColor = small.pixels[loc];
-      println (tempColor);
+      //println (tempColor);
       
       grid[i][j].updateColor(tempColor);
       grid[i][j].display();
