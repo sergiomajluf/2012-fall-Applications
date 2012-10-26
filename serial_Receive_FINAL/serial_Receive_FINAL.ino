@@ -12,7 +12,9 @@
  
  This example code is in the public domain. 
  http://www.arduino.cc/en/Tutorial/PhysicalPixel
- 
+
+ Look at the accompanying image to see the wiring 
+
  */
 
 const int ledBlockA = 13; // the pin that the LED is attached to
@@ -44,24 +46,27 @@ void loop() {
     if (incomingByte == 'L') {
       digitalWrite(ledBlockA, LOW);
     }
+    // if it's an L (ASCII 85) turn off the LED:
     if (incomingByte == 'U') {
       digitalWrite(ledBlockB, HIGH);
     } 
-    // if it's an L (ASCII 76) turn off the LED:
+    // if it's an L (ASCII 68) turn off the LED:
     if (incomingByte == 'D') {
       digitalWrite(ledBlockB, LOW);
     }
+    // if it's an L (ASCII 82) turn off the LED:
     if (incomingByte == 'R') {
       digitalWrite(ledBlockC, HIGH);
     } 
-    // if it's an L (ASCII 76) turn off the LED:
+    // if it's an L (ASCII 73) turn off the LED:
     if (incomingByte == 'I') {
       digitalWrite(ledBlockC, LOW);
     }
+    // if it's an L (ASCII 84) turn off the LED:
     if (incomingByte == 'T') {
       digitalWrite(ledBlockD, HIGH);
     } 
-    // if it's an L (ASCII 76) turn off the LED:
+    // if it's an L (ASCII 89) turn off the LED:
     if (incomingByte == 'Y') {
       digitalWrite(ledBlockD, LOW);
     }
